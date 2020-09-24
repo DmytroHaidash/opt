@@ -1,0 +1,18 @@
+.filters {
+  @apply relative rounded p-4 border-2 shadow-xl bg-white mb-8 z-40;
+
+  @screen lg {
+    @apply sticky;
+    top: 5rem;
+  }
+  .vs__actions {
+    display: flex;
+  }
+  .vs__clear{
+    margin-right: 0px;
+  }
+
+  .vs__open-indicator {
+    display: none;
+  }
+}

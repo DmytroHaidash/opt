@@ -1,0 +1,17 @@
+.pagination {
+  @apply flex justify-center my-6;
+}
+
+.page {
+  &-item {
+    @apply px-2;
+
+    &.active {
+      @apply font-bold;
+    }
+
+    &.disabled {
+      @apply text-gray-600;
+    }
+  }
+}

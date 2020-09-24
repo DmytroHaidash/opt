@@ -1,0 +1,33 @@
+.dropdown {
+  @apply relative;
+  z-index: 1000;
+
+  &-menu {
+    @apply absolute bg-white shadow-xl p-3 rounded w-full min-w-sm max-w-xxs border-2 mt-3;
+    top: 100%;
+    z-index: 10;
+
+    &.center {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &.left {
+      left: 0;
+    }
+
+    &.right {
+      right: 0;
+    }
+  }
+
+  &-arrow {
+    @apply absolute w-3 h-3 bg-white border-2 border-r-0 border-b-0;
+    transform: rotate(45deg);
+    margin-top: 6 / 16 * 1rem;
+    //margin-left: 6 / 16 * -1rem;
+    left: 50%;
+    top: 100%;
+    z-index: 20;
+  }
+}

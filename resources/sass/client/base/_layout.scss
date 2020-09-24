@@ -1,0 +1,11 @@
+*, *::before, *::after {
+  outline: none !important;
+}
+
+[v-cloak] {
+  display: none;
+}
+
+body {
+  background-color: #fff;
+}

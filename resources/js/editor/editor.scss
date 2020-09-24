@@ -1,0 +1,88 @@
+@import '~froala-editor/css/froala_editor.pkgd.min.css';
+
+$border-radius: theme('borderRadius.default');
+$input-border-width: 2px;
+$border-color: theme('colors.gray.300');
+$primary: theme('colors.orange.500');
+
+.fr-box.fr-basic {
+  border-radius: 0;
+}
+
+.second-toolbar {
+  display: none;
+}
+
+.fr-wrapper > div:not(.fr-view) a {
+  font-size: 0 !important;
+  padding: 0 !important;
+  height: 0 !important;
+}
+
+.fr-toolbar.fr-top {
+  border-width: $input-border-width;
+  border-color: $border-color;
+  border-radius: $border-radius $border-radius 0 0;
+}
+
+.fr-box.fr-basic .fr-wrapper {
+  border-width: $input-border-width;
+  border-color: $border-color;
+  border-radius: 0 0 $border-radius $border-radius;
+
+  .fr-element {
+    min-height: theme('spacing.48');
+    @apply text-base p-4;
+
+    p, h2, h3, h4, h5, h6, ul, ol, blockquote {
+      @apply mb-3 font-sans;
+    }
+
+    h2, h3, h4, h5, h6 {
+      @apply font-slab font-bold;
+    }
+
+    h2 {
+      @apply text-3xl;
+    }
+
+    h3 {
+      @apply text-2xl;
+    }
+
+    h4 {
+      @apply text-xl;
+    }
+
+    h5 {
+      @apply text-lg;
+    }
+
+    h6 {
+      @apply text-base;
+    }
+  }
+
+  &.show-placeholder .fr-placeholder {
+    padding: theme('spacing.4') theme('spacing.4') 0 !important;
+    font-size: theme('fontSize.base') !important;
+    color: theme('colors.gray.500');
+    margin: 0 !important;
+  }
+}
+
+.fr-quick-insert a.fr-floating-btn svg {
+  margin: 0;
+}
+
+.fr-box {
+  .fr-floating-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    padding: 6px 10px !important;
+
+    svg {
+      width: 100%;
+    }
+  }
+}
